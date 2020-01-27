@@ -1,4 +1,4 @@
-![Preview](https://github.com/Sergey-Khlustikov/Vue.js-Shop/blob/master/demo.JPG)
+![Preview](https://github.com/Sergey-Khlustikov/Vue.js-Shop/assets/blob/master/demo.JPG)
 # Vue.js Demo Shop
 
 Project demo is available at http://shop.sh-it.ru/
