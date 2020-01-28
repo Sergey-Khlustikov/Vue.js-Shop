@@ -1,7 +1,7 @@
 ![Preview](https://github.com/Sergey-Khlustikov/Vue.js-Shop/blob/master/assets/demo.JPG)
 # Vue.js Demo Shop
 
-Project demo is available at http://shop.sh-it.ru/
+Project demo is available at https://shop.sh-it.ru/
 
 ### What was implemented:
 
