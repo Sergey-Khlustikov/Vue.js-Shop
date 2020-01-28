@@ -6,7 +6,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 Vue.use(VueAxios, axios)
-axios.defaults.baseURL = 'http://shop.sh-it.ru/api/v1'
+axios.defaults.baseURL = 'https://shop.sh-it.ru/api/v1'
 
 // eslint-disable-next-line no-new
 new Vue({
