@@ -1,6 +1,6 @@
 {
-  "name": "lesson_7",
-  "description": "Vue router + vuex",
+  "name": "demo_shop",
+  "description": "",
   "version": "1.0.0",
   "author": "Sergey Khlustikov <Sergeykhlustikov1@gmail.com>",
   "license": "MIT",
@@ -38,6 +38,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.1.2",
     "file-loader": "^1.1.4",
+    "prerender-spa-plugin": "^3.4.0",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

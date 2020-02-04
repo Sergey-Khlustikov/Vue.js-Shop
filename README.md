@@ -10,6 +10,7 @@ Project demo is available at https://shop.sh-it.ru/
 - Product page
 - Cart page
 - Checkout page
+- Pre-render for static pages (homepage, cart, checkout) using [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)
 
 *Shop uses simplified api in php without DB*
 

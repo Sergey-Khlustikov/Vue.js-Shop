@@ -1,5 +1,17 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
+
+const productionPlugins = [
+  new PrerenderSpaPlugin({
+    staticDir: path.join(__dirname, 'dist'),
+    indexPath: path.join(__dirname, '/', 'index.html'),
+    routes: ['/', '/products', '/cart', '/checkout'],
+    renderer: new PrerenderSpaPlugin.PuppeteerRenderer({
+      inject: {}
+    })
+  })
+]
 
 module.exports = {
   entry: './src/main.js',
@@ -15,8 +27,9 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader'
-        ],
-      },      {
+        ]
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -41,7 +54,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      vue$: 'vue/dist/vue.esm.js'
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
@@ -53,12 +66,13 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: []
 }
 
 if (process.env.NODE_ENV === 'production') {
+  module.exports.plugins.push(...productionPlugins)
   module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
